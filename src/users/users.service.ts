@@ -17,6 +17,16 @@ export class UsersService {
             name: 'Marius',
             username: 'marius',
             password: 'password'
+        },
+        {
+            id: 2,
+            name: 'Baba',
+            username: 'baba',
+            password: 'password'
         }
 ]
+
+async findOne(username: string): Promise<User | undefined>{
+    return this.users.find(user => user.username === username);
+}
 }
